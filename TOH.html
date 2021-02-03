@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tower of Hanoi</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+<body>
+  
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<div class="intro">
+	<h1 class="a"><center>Tower of Hanoi</center></h1>
+	<!--<div class="name">
+		<p><center><b>Pradnya Gavali<br>
+		Comps 171071058</b></center></p>
+	</div>	-->
+</div>
+
+<div class="container" id="app">
+  <nav class="game-nav">
+    <h1 class="game-title">{{ title }}</h1><span class="warning-text" v-if="warned">{{ warning_text }}</span><span class="completion-text" v-if="completed">{{ completion_text }}</span>
+    <div class="right-nav">
+      <select class="input disk-count-selector" v-model="disk_count" v-if="!started">
+        <option v-for="option in disk_count_options" :value="option.value">{{ option.text }}</option>
+      </select>
+      <button class="input reset-button" type="reset" @click="resetGame">Reset</button>
+    </div>
+  </nav><br><br>
+<hr size="5">
+  <div class="game-container">
+    <div class="lift-area">   </div>
+    <div class="disk-area">
+      <div class="disk-area-inner" @click="onClickHandler('left')" @mouseenter="onMouseEnterHandler('left')">
+        <div class="disks">
+          <div class="disk" v-for="n in disk_count" :class="diskClasses(n, 'left')">  </div>
+        </div>
+        <div class="peg">     </div>
+      </div>
+      <div class="disk-area-inner" @click="onClickHandler('middle')" @mouseenter="onMouseEnterHandler('middle')">
+        <div class="disks">
+          <div class="disk" v-for="n in disk_count" :class="diskClasses(n, 'middle')"></div>
+        </div>
+        <div class="peg">   </div>
+      </div>
+      <div class="disk-area-inner" @click="onClickHandler('right')" @mouseenter="onMouseEnterHandler('right')">
+        <div class="disks">
+          <div class="disk" v-for="n in disk_count" :class="diskClasses(n, 'right')"></div>
+        </div>
+        <div class="peg"></div>
+      </div>
+    </div>
+    <div class="base-area">
+      <div class="base-bar"></div>
+    </div>
+    <br>
+    <hr size="5">
+    <div class="game-info">
+      <div class="movement-counter" :class="{ 'count-over': is_count_over }">move: {{ movement_count }}/{{ shortest_movement_count }}</div>
+    </div>
+  </div>
+</div>
+</body>
+
+
+    <script type="text/javascript" src="main.js"></script>
+
+</body>
+</html>

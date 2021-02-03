@@ -1,0 +1,162 @@
+.a{
+  text-shadow: 2px 2px 5px red;
+}
+.intro{
+  background:#7C7978 ;
+  height: 80px;
+  border: 2px solid red;
+  border-radius: 25px;
+}
+.name{
+  margin-left: auto;
+  border:3px solid black;
+   width: 170px;
+   height: 60px;
+  border-radius: 20px;
+}
+body{
+  background-color:#e7e7e7;/*#DFD2CF  ;*/
+}
+
+.container {
+  background-color: #CFB1AB  ;/*#f7fcfe;*/
+  width: 660px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.game-nav {
+  background-color: #eaf4fc;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  height: 0px;
+  margin-top: 100px;
+}
+.game-title {
+  color: #333;
+  line-height: 40px;
+  margin: 0 20px 0 0;
+}
+.warning-text {
+  color: #e2041b;
+  line-height: 40px;
+}
+.completion-text {
+  color: #006e54;
+  font-weight: bold;
+  line-height: 40px;
+}
+.right-nav {
+  height: 40px;
+}
+.input {
+  border: 1px solid #999;
+  border-radius: 4px;
+  height: 32px;
+  margin: 4px;
+}
+.disk-count-selector {
+  width: 40px;
+}
+.reset-button {
+  margin: 4px;
+  background-color: #4CAF50; /* Green */
+  border: none;
+  text-align: center;
+}
+.game-container {
+  padding: 0 10px;
+}
+.lift-area {
+  height: 40px;
+}
+.disk-area {
+  display: flex;
+  height: 240px;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+.disk-area-inner {
+  padding-top: 20px;
+  position: relative;
+  width: 200px;
+}
+.disks {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: flex-end;
+}
+.disk {
+  background-color: #E33B17 ;
+  height: 20px;
+  z-index: 10;
+}
+.disk:nth-child(odd) {
+  background-color: #0915DE ;
+}
+.lifted-disk {
+  position: absolute;
+  top: -30px;
+}
+.hidden-disk {
+  display: none;
+}
+.disk1 {
+  width: 40px;
+}
+.disk2 {
+  width: 60px;
+}
+.disk3 {
+  width: 80px;
+}
+.disk4 {
+  width: 100px;
+}
+.disk5 {
+  width: 120px;
+}
+.disk6 {
+  width: 140px;
+}
+.disk7 {
+  width: 160px;
+}
+.disk8 {
+  width: 180px;
+}
+.disk9 {
+  width: 200px;
+}
+.peg {
+  background-color: #65603C;/*#6f4b3e;*/
+  bottom: 0;
+  height: 220px;
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  width: 20px;
+}
+.base-area {
+  height: 20px;
+}
+.base-bar {
+  background-color: #65603C;
+  height: 100%;
+}
+.game-info {
+  height: 40px;
+  padding: 0 10px;
+}
+.movement-counter {
+  color: black;/*#666;*/
+  line-height: 40px;
+  margin: 0 4px;
+}
+.count-over {
+  color: #e2041b;
+}
